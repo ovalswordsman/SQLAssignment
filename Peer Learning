@@ -1,0 +1,73 @@
+Chinigepalli Chakradhar Srinivas
+
+Q1 : 
+Counts the number of occurrences of "Male" and "Female" in the "Gender" column 
+and returns the results as two separate columns named "Num of Male" and "Num of females"
+Returns the department name along with the count of male and female employees       
+in each department, with a default value of "Not Assigned" for departments that have no assigned employees.
+The results are ordered by the "Department" column in ascending order.
+
+Q2:  
+Used a subquery to find the name of month with the greatest salary using GREATEST.
+Determines the month corresponding to the maximum value using the "field" function, which returns the index of a value in a 
+list of values, and stores the result in the "idx" column. 
+Uses a "CASE WHEN" statement to convert the "idx" column into the month name (Jan, Feb, or Mar) and returns the result in the "Month" column.
+
+
+Q3: 
+The query selects three columns: "Marks", "Rank", and "Candidate_id".
+Used dense_rank() to calculate the rank of candidates and then grouped the data based on marks. 
+Used GROUP_CONCAT() to concatenate the IDs for each group.
+
+
+Q4 : Used inner join operation in the subquery is used to find all the duplicates in the "mail" column of the "mailids" table and 
+then used DELETE statement to delete all these rows except the ones with the smallest candidate IDs.
+Used three subqueries which is not necessary
+
+
+Rithish Punna
+
+Q1
+Counts the number of occurrences of "Male" and "Female" in the "Gender" column 
+and returns the results as two separate columns named "Num of Male" and "Num 
+of females". Returns the department name along with the count of male and female employees  
+in each department, with a default value of "Not Assigned" for departments that  have no assigned employees. 
+The results are ordered by the "Department" column in ascending order.
+
+
+Q2
+selects three columns, name of the employee, value to store the largest salary , and month. 
+The greatest function is used to get the highest salary per employee in the columns in Jan, Feb and March. 
+The field function is used to get the month where the highest salary exists
+
+Q3
+selects the three columns Marks, Rank and candidate id the dense_rank function calculates the rank of the students 
+on the marks achieved the ranks are grouped together so that two students who score the same marks are given the same 
+rank instead of different ranks. Used GROUP_CONCAT() to concatenate the IDs for each group.
+Q4 : Used inner join operation in the subquery is used to find all the duplicates in the "mail" column of the "mailids" table 
+and then used DELETE statement to delete all these rows except the ones with the smallest candidate IDs.
+
+Used three subqueries which is not necessary
+
+
+
+
+Pankaj Kumar Singh 
+Q1
+Used GROUP BY to group data based and departmenta. Used SUM function to add the number of male and female employees based on the CASE condition.
+Q2
+Used any_value function to choose any month (jan,fab, march in our case) which satisfies the condition that salary is greatest. 
+Again CASE expression is used to check which month is greatest and also returns the max amount as value.
+Q3
+Used Dense_Rank() function which assigns the rank to each row . Assigns top rank to highest mark by using “order by marks desc”. 
+Used GROUP_CONCAT() to concatenate the IDs for each group.
+Q4
+Used self JOIN and then DELETE by taking two tables c1 and c2 based on the condition that c1.email_id is equal to c2.email_id and 
+c1.candidate_id is greater than c2.candidate_id.
+
+
+
+
+
+
+
