@@ -2,6 +2,7 @@
 
 
 ## -- q1
+```mysql
 create table employees(
 	  EmpID int,
     Name varchar(20),
@@ -21,7 +22,9 @@ SELECT department,
 FROM employees
 GROUP BY department;
 
+```
 ## -- q2
+```mysql
 create table salary (
 	Name varchar(20),
 	Jan int,
@@ -44,8 +47,9 @@ ANY_VALUE(CASE
   WHEN Mar = GREATEST(Jan, Feb, Mar) THEN 'Mar'
   END) AS Month
 FROM salary;
-
+```
 ## -- q3
+```mysql
 create table marks (
 	Candidate_ID int, 
   Marks int
@@ -65,8 +69,9 @@ Candidate_ID
 FROM marks
 GROUP BY Marks
 ORDER BY `Rank`;
-
+```
 ## -- q4
+```mysql
 create table ID (
 	candidate_ID int, 
   Email varchar(30)
@@ -85,3 +90,4 @@ JOIN ID c2
 ON c1.Email = c2.Email AND c1.Candidate_ID > c2.Candidate_ID;
 
 select * from ID;
+```
